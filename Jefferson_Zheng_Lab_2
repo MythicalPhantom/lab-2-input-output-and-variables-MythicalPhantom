@@ -1,0 +1,35 @@
+/*
+Jefferson Zheng
+September 17,2024
+Lab 2
+*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string cerealName;
+    double servingCalories, servingOunces, totalCalories;
+    cout << "Cereal Name: ";
+    cin >> cerealName;
+    cout << "# of Calories per Serving: ";
+    cin >> servingCalories;
+    cout << "# of Ounces per Serving: ";
+    cin >> servingOunces;
+    cout << "One serving of \"" << cerealName << "\" is " << servingCalories << " ounces and has " << servingCalories / servingOunces << " calories per ounce." << endl;
+    cout << "How many calories of cereal is the user willing to eat today? ";
+    cin >> totalCalories;
+    cout << "You can eat ~" << (totalCalories / (servingCalories / servingOunces)/1.0) << " ounces of \"" << cerealName << "\"!"<< endl;
+    return 0;
+}
+
+/*
+PS C:\Users\jefferson.zheng23\Documents\GitHub\Test> cd "c:\Users\jefferson.zheng23\Documents\GitHub\Test\" ; if ($?) { g++ jefferson_zheng_lab_2.cpp -o jefferson_zheng_lab_2 } ; if ($?) { .\jefferson_zheng_lab_2 }
+Cereal Name: Hamburger
+# of Calories per Serving: 210
+# of Ounces per Serving: 6
+One serving of "Hamburger" is 210 ounces and has 35 calories per ounce.
+How many calories of cereal is the user willing to eat today? 2200
+You can eat ~62.8571 ounces of "Hamburger"!
+*/
